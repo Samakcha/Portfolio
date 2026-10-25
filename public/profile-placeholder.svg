@@ -1,0 +1,10 @@
+<svg width="800" height="840" viewBox="0 0 800 840" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="840" rx="48" fill="#D9D6E9"/>
+  <circle cx="400" cy="315" r="150" fill="#B7B3D0"/>
+  <path d="M160 760C184 592 280 520 400 520C520 520 616 592 640 760H160Z" fill="#9692B4"/>
+  <circle cx="350" cy="300" r="14" fill="#403D55"/>
+  <circle cx="450" cy="300" r="14" fill="#403D55"/>
+  <path d="M345 390C378 420 422 420 455 390" stroke="#403D55" stroke-width="14" stroke-linecap="round"/>
+  <text x="400" y="115" text-anchor="middle" fill="#403D55" font-family="Arial, sans-serif" font-size="32" letter-spacing="4">SAMAKCHA</text>
+  <text x="400" y="800" text-anchor="middle" fill="#403D55" font-family="Arial, sans-serif" font-size="20" letter-spacing="3">PORTRAIT PLACEHOLDER</text>
+</svg>
