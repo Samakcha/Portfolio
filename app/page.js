@@ -464,6 +464,41 @@ function FootballLayer() {
   );
 }
 
+function ContactSection() {
+  return (
+    <section className="contact-section" id="contact" aria-labelledby="contact-title">
+      <div className="contact-status"><span className="spark">✳</span> available for interesting projects</div>
+      <div className="contact-layout">
+        <div className="contact-copy">
+          <h2 id="contact-title">Let’s build something useful.</h2>
+          <p>I’m open to conversations about full-stack applications, backend systems, AI-powered projects, and ideas that are worth bringing to life.</p>
+          <div className="contact-actions">
+            <a className="primary-button" href="mailto:samakchakrmishra03@gmail.com">start a conversation <span>↗</span></a>
+            <a className="text-link" href="/resume">view resume <span>↗</span></a>
+          </div>
+        </div>
+        <div className="contact-details">
+          <div className="contact-detail-block">
+            <span className="contact-label">Email</span>
+            <a href="mailto:samakchakrmishra03@gmail.com">samakchakrmishra03@gmail.com</a>
+          </div>
+          <div className="contact-detail-block">
+            <span className="contact-label">Links</span>
+            <div className="contact-links">
+              <a href="https://github.com/Samakcha" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            </div>
+          </div>
+          <div className="contact-detail-block contact-detail-last">
+            <span className="contact-label">Location</span>
+            <span>India · IST</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   const [clock, setClock] = useState("--:--");
   const [buildFontIndex, setBuildFontIndex] = useState(0);
@@ -544,6 +579,7 @@ export default function HomePage() {
             <ProjectCard className="project-blue" number="10" title="Project ten" category="in progress" symbol="✦" videoSrc="/perfume.mp4" />
           </div>
         </section>
+        <ContactSection />
         <footer className="home-footer"><span>© 2026 Samakcha Mishra</span><span>made with curiosity &amp; too much coffee</span></footer>
       </section>
     </main>
