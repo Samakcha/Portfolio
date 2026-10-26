@@ -93,9 +93,28 @@ export default function ContactPage() {
       </section>
 
       <footer className="contact-footer">
-        <span>© 2026 Samakcha Mishra</span>
-        <a href="mailto:samakchakrmishra03@gmail.com">samakchakrmishra03@gmail.com ↗</a>
-        <span>available for interesting projects</span>
+        <div className="contact-footer-main">
+          <div className="contact-footer-brand">
+            <Link className="wordmark" href="/#home">sam<span>.</span></Link>
+            <p>Building useful things<br />with curiosity and care.</p>
+          </div>
+          <div className="contact-footer-column">
+            <span className="contact-label">Get in touch</span>
+            <a className="contact-footer-email" href="mailto:samakchakrmishra03@gmail.com">samakchakrmishra03@gmail.com <span>↗</span></a>
+          </div>
+          <div className="contact-footer-column">
+            <span className="contact-label">Explore</span>
+            <div className="contact-footer-links">
+              <Link href="/#home">Home</Link>
+              <Link href="/contact">Contact</Link>
+              <a href="https://github.com/Samakcha" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+        <div className="contact-footer-bottom">
+          <span>© 2026 Samakcha Mishra</span>
+          <span>Available for interesting projects · India / IST</span>
+        </div>
       </footer>
     </section>
   );
