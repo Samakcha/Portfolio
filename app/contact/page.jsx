@@ -85,7 +85,7 @@ export default function ContactPage() {
               <span className="contact-label">Links</span>
               <div className="contact-links">
                 <a href="https://github.com/Samakcha" target="_blank" rel="noreferrer">GitHub ↗</a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a href="https://www.linkedin.com/in/samakchamishra" target="_blank" rel="noreferrer">LinkedIn ↗</a>
               </div>
             </div>
             <div className="contact-detail-block contact-detail-last">
@@ -112,7 +112,7 @@ export default function ContactPage() {
               <a className="footer-social-link" href="https://github.com/Samakcha" target="_blank" rel="noreferrer" aria-label="GitHub">
                 <FaGithub aria-hidden="true" />
               </a>
-              <a className="footer-social-link" href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <a className="footer-social-link" href="https://www.linkedin.com/in/samakchamishra" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <FaLinkedinIn aria-hidden="true" />
               </a>
               <a className="footer-social-link" href="https://www.x.com/SamMishra10_03" target="_blank" rel="noreferrer" aria-label="X">
