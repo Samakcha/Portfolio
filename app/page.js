@@ -197,6 +197,15 @@ function ChatPanel() {
 
 function ProjectCard({ className, number, title, category, symbol, imageSrc, imageAlt, videoSrc }) {
   const [cursor, setCursor] = useState({ visible: false, x: 0, y: 0 });
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
+  }, [videoSrc]);
 
   function moveProjectCursor(event) {
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -206,7 +215,23 @@ function ProjectCard({ className, number, title, category, symbol, imageSrc, ima
   return (
     <article className={`project-card ${className}`} onPointerEnter={moveProjectCursor} onPointerMove={moveProjectCursor} onPointerLeave={() => setCursor((current) => ({ ...current, visible: false }))}>
       <span className="project-cursor" aria-hidden="true" style={{ left: cursor.x, top: cursor.y, opacity: cursor.visible ? 1 : 0, transform: `translate(-50%, -50%) scale(${cursor.visible ? 1 : 0.86})` }}><span className="project-cursor-text">View project</span></span>
-      {videoSrc ? <video className="project-image project-video" src={videoSrc} autoPlay muted loop playsInline aria-label={`Project ${number} preview`} /> : imageSrc ? <img className="project-image" src={imageSrc} alt={imageAlt} /> : <div className="placeholder-art"><span className="art-label">placeholder / {number}</span><span className="art-symbol">{symbol}</span></div>}
+      {videoSrc ? (
+        <video
+          ref={videoRef}
+          className="project-image project-video"
+          src={videoSrc}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-label={`Project ${number} preview`}
+        />
+      ) : imageSrc ? (
+        <img className="project-image" src={imageSrc} alt={imageAlt} />
+      ) : (
+        <div className="placeholder-art"><span className="art-label">placeholder / {number}</span><span className="art-symbol">{symbol}</span></div>
+      )}
     </article>
   );
 }
@@ -510,12 +535,12 @@ export default function HomePage() {
             <ProjectCard className="project-blue" number="02" title="Project two" category="AI experiment" symbol="✦" imageSrc="/studycoach-preview.png" imageAlt="StudyCoach project preview" />
             <ProjectCard className="project-peach" number="03" title="Project three" category="product build" symbol="⌁" imageSrc="/miniledger-preview.png" imageAlt="MiniLedger project preview" />
             <ProjectCard className="project-mint" number="04" title="Project four" category="in progress" symbol="+" videoSrc="/glasses.mp4" />
-            <ProjectCard className="project-lilac" number="05" title="Project five" category="placeholder" symbol="◌" />
-            <ProjectCard className="project-blue" number="06" title="Project six" category="placeholder" symbol="✦" />
-            <ProjectCard className="project-peach" number="07" title="Project seven" category="placeholder" symbol="⌁" />
-            <ProjectCard className="project-mint" number="08" title="Project eight" category="placeholder" symbol="+" />
-            <ProjectCard className="project-lilac" number="09" title="Project nine" category="placeholder" symbol="◌" />
-            <ProjectCard className="project-blue" number="10" title="Project ten" category="placeholder" symbol="✦" />
+            <ProjectCard className="project-lilac" number="05" title="Project five" category="in progress" symbol="◌" videoSrc="/shoes.mp4" />
+            <ProjectCard className="project-blue" number="06" title="ExpenseAI" category="AI finance" symbol="✦" imageSrc="/expenseai-preview.png" imageAlt="ExpenseAI project preview" />
+            <ProjectCard className="project-peach" number="07" title="Multi-Agent Hiring Pipeline" category="CrewAI multi-agent" symbol="⌁" imageSrc="/multiagent-preview.jpg" imageAlt="Multi-Agent Hiring Pipeline preview" />
+            <ProjectCard className="project-mint" number="08" title="Project eight" category="in progress" symbol="+" videoSrc="/cycle.mp4" />
+            <ProjectCard className="project-lilac" number="09" title="Project nine" category="in progress" symbol="◌" videoSrc="/watch.mp4" />
+            <ProjectCard className="project-blue" number="10" title="Project ten" category="in progress" symbol="✦" videoSrc="/perfume.mp4" />
           </div>
         </section>
         <footer className="home-footer"><span>© 2026 Samakcha Mishra</span><span>made with curiosity &amp; too much coffee</span></footer>
