@@ -73,6 +73,7 @@ nav a:hover, nav a.active { color: var(--ink); background: #fffefa; box-shadow: 
 .time-dot { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 50%; background: #e26f40; }
 .hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 36px; min-height: 410px; padding: 36px 34px; border-radius: 22px; overflow: hidden; background: var(--panel); }
 .football-layer { position: absolute; z-index: 1; inset: 0; overflow: hidden; pointer-events: none; }
+.football-grass { position: absolute; z-index: 0; left: 0; right: 0; bottom: -2px; width: 100%; height: 88px; background: url('/grass.svg') bottom center / 260px 87px repeat-x; opacity: .72; mix-blend-mode: multiply; pointer-events: none; user-select: none; }
 .football-shadow { position: absolute; z-index: 0; bottom: 5px; left: 0; width: 92px; height: 12px; border-radius: 50%; background: rgba(54, 49, 44, .22); filter: blur(7px); pointer-events: none; transform-origin: center; }
 .football { position: absolute; z-index: 1; top: 0; left: 0; display: grid; place-items: center; width: 92px; height: 92px; padding: 0; border: 0; border-radius: 50%; overflow: hidden; background: transparent; cursor: grab; line-height: 1; pointer-events: auto; transition: filter .2s ease; touch-action: none; user-select: none; }
 .football img { position: absolute; inset: -15%; display: block; width: 130%; height: 130%; max-width: none; mix-blend-mode: multiply; pointer-events: none; user-select: none; }

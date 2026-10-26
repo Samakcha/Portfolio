@@ -442,6 +442,7 @@ function FootballLayer() {
 
   return (
     <div className="football-layer" ref={fieldRef} aria-hidden="false">
+      <div className="football-grass" aria-hidden="true" />
       <div className="football-shadow" style={{ transform: `translate3d(${motion.x}px, 0, 0) scaleX(${motion.shadowScale})`, opacity: motion.shadowOpacity, visibility: motion.initialized ? "visible" : "hidden" }} />
       <button
         ref={ballRef}
