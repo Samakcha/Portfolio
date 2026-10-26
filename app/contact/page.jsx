@@ -49,6 +49,15 @@ export default function ContactPage() {
         <div className="local-time"><span className="time-dot" />{clock} IST</div>
       </header>
 
+      <section className="cal-embed" aria-label="Schedule an intro call">
+        <iframe
+          src="https://cal.com/samakcha-mishra/intro-call?embed=true&theme=light"
+          title="Schedule an intro call with Samakcha Mishra"
+          loading="lazy"
+          allow="fullscreen"
+        />
+      </section>
+
       <section className="contact-section" aria-labelledby="contact-title">
         <div className="contact-status"><span className="spark">✳</span> available for interesting projects</div>
         <div className="contact-layout">
