@@ -97,7 +97,7 @@ export default function ContactPage() {
       </section>
 
       <footer className="contact-footer">
-        <img className="contact-footer-grass" src="/grass.svg" alt="" aria-hidden="true" />
+        <div className="contact-footer-grass" aria-hidden="true" />
         <div className="contact-footer-main">
           <div className="contact-footer-brand">
             <Link className="wordmark" href="/#home">sam<span>.</span></Link>
