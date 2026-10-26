@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 function currentClockTime() {
   return new Intl.DateTimeFormat("en-IN", {
@@ -110,6 +111,9 @@ export default function ContactPage() {
               </a>
               <a className="footer-social-link" href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <FaLinkedinIn aria-hidden="true" />
+              </a>
+              <a className="footer-social-link" href="https://www.x.com/SamMishra10_03" target="_blank" rel="noreferrer" aria-label="X">
+                <FaXTwitter aria-hidden="true" />
               </a>
             </div>
           </div>
