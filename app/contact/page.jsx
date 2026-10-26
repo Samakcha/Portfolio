@@ -121,10 +121,6 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-        <div className="contact-footer-bottom">
-          <span>© 2026 Samakcha Mishra</span>
-          <span>Available for interesting projects · India / IST</span>
-        </div>
       </footer>
     </section>
   );
