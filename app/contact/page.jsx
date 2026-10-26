@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function currentClockTime() {
   return new Intl.DateTimeFormat("en-IN", {
@@ -100,14 +101,16 @@ export default function ContactPage() {
           </div>
           <div className="contact-footer-column">
             <span className="contact-label">Get in touch</span>
-            <a className="contact-footer-email" href="mailto:samakchakrmishra03@gmail.com">samakchakrmishra03@gmail.com <span>↗</span></a>
-          </div>
-          <div className="contact-footer-column">
-            <span className="contact-label">Explore</span>
-            <div className="contact-footer-links">
-              <Link href="/#home">Home</Link>
-              <Link href="/contact">Contact</Link>
-              <a href="https://github.com/Samakcha" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <div className="contact-footer-socials">
+              <a className="footer-social-link" href="mailto:samakchakrmishra03@gmail.com" aria-label="Email Samakcha Mishra">
+                <span className="gmail-mark" aria-hidden="true">G</span>
+              </a>
+              <a className="footer-social-link" href="https://github.com/Samakcha" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <FaGithub aria-hidden="true" />
+              </a>
+              <a className="footer-social-link" href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <FaLinkedinIn aria-hidden="true" />
+              </a>
             </div>
           </div>
         </div>
