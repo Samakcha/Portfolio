@@ -152,7 +152,7 @@ h2 { margin-bottom: 0; font-size: clamp(27px, 3vw, 42px); letter-spacing: -.06em
 .contact-links { display: flex; flex-wrap: wrap; gap: 12px; }
 .contact-detail-last { border-bottom: 0; }
 .contact-footer { position: relative; isolation: isolate; overflow: hidden; margin-top: 72px; padding: 30px 34px 18px; border: 1px solid var(--line); border-radius: 22px; color: var(--muted); background: rgba(255, 254, 250, .72); }
-.contact-footer-grass { position: absolute; z-index: 0; right: 0; bottom: -1px; left: 0; width: 100%; height: 78px; object-fit: cover; object-position: bottom center; opacity: .34; mix-blend-mode: multiply; pointer-events: none; user-select: none; }
+.contact-footer-grass { position: absolute; z-index: 0; right: 0; bottom: -1px; left: 0; width: 100%; height: 60px; object-fit: fill; opacity: .24; mix-blend-mode: multiply; mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .88) 32%, #000 100%); pointer-events: none; user-select: none; }
 .contact-footer-main { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(220px, .8fr); gap: 40px; padding-bottom: 38px; }
 .contact-footer-brand .wordmark { display: inline-block; margin-bottom: 18px; }
 .contact-footer-brand p { margin: 0; color: #8a857d; font-size: 14px; line-height: 1.5; }
