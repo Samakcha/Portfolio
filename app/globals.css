@@ -134,8 +134,12 @@ h2 { margin-bottom: 0; font-size: clamp(27px, 3vw, 42px); letter-spacing: -.06em
 .contact-section { margin-top: 72px; padding: 34px; border-radius: 22px; background: var(--panel); }
 .calendar-section { margin-top: 56px; }
 .calendar-heading { margin-bottom: 18px; }
-.cal-embed { margin-top: 18px; overflow: hidden; border: 1px solid rgba(222, 219, 212, .8); border-radius: 22px; background: var(--panel); box-shadow: 0 3px 14px rgba(69, 61, 47, .05); }
-.cal-embed iframe { display: block; width: 100%; height: 650px; border: 0; background: #fff; }
+.cal-embed { position: relative; margin-top: 18px; overflow: hidden; border: 1px solid rgba(222, 219, 212, .8); border-radius: 22px; background: var(--panel); box-shadow: 0 3px 14px rgba(69, 61, 47, .05); }
+.cal-embed::before { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; content: "Loading calendar"; color: #9a958d; font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; background: linear-gradient(135deg, rgba(255, 254, 250, .94), rgba(247, 244, 237, .9)); transition: opacity .35s ease, visibility .35s ease; }
+.cal-embed iframe { display: block; width: 100%; height: 650px; border: 0; background: #fff; opacity: 0; transform: translateY(8px); transition: opacity .55s ease, transform .55s cubic-bezier(.22, 1, .36, 1); }
+.cal-embed.is-loaded::before { opacity: 0; visibility: hidden; }
+.cal-embed.is-loaded iframe { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .cal-embed::before, .cal-embed iframe { transition: none; } .cal-embed iframe { transform: none; } }
 .contact-status { margin-bottom: 30px; color: var(--muted); font-family: "DM Mono", monospace; font-size: 11px; }
 .contact-layout { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 36px; }
 .contact-copy h1 { max-width: 620px; margin-bottom: 22px; font-size: clamp(36px, 4vw, 64px); font-weight: 600; line-height: 1.02; letter-spacing: -.06em; }

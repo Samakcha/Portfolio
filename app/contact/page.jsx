@@ -18,6 +18,7 @@ function currentClockTime() {
 export default function ContactPage() {
   const [clock, setClock] = useState("--:--:--");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isCalendarLoaded, setIsCalendarLoaded] = useState(false);
 
   useEffect(() => {
     const updateClock = () => setClock(currentClockTime());
@@ -53,12 +54,13 @@ export default function ContactPage() {
 
       <section className="calendar-section" aria-labelledby="calendar-title">
         <div className="section-heading calendar-heading"><h2 id="calendar-title">Calendar</h2></div>
-        <div className="cal-embed" aria-label="Schedule an intro call">
+        <div className={`cal-embed${isCalendarLoaded ? " is-loaded" : ""}`} aria-label="Schedule an intro call">
         <iframe
           src="https://cal.com/samakcha-mishra/intro-call?embed=true&theme=light"
           title="Schedule an intro call with Samakcha Mishra"
           loading="lazy"
           allow="fullscreen"
+          onLoad={() => setIsCalendarLoaded(true)}
         />
         </div>
       </section>
