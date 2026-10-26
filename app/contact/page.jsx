@@ -49,13 +49,16 @@ export default function ContactPage() {
         <div className="local-time"><span className="time-dot" />{clock} IST</div>
       </header>
 
-      <section className="cal-embed" aria-label="Schedule an intro call">
+      <section className="calendar-section" aria-labelledby="calendar-title">
+        <div className="section-heading calendar-heading"><h2 id="calendar-title">Calendar</h2></div>
+        <div className="cal-embed" aria-label="Schedule an intro call">
         <iframe
           src="https://cal.com/samakcha-mishra/intro-call?embed=true&theme=light"
           title="Schedule an intro call with Samakcha Mishra"
           loading="lazy"
           allow="fullscreen"
         />
+        </div>
       </section>
 
       <section className="contact-section" aria-labelledby="contact-title">
@@ -89,7 +92,11 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <footer className="home-footer"><span>© 2026 Samakcha Mishra</span><span>made with curiosity &amp; too much coffee</span></footer>
+      <footer className="contact-footer">
+        <span>© 2026 Samakcha Mishra</span>
+        <a href="mailto:samakchakrmishra03@gmail.com">samakchakrmishra03@gmail.com ↗</a>
+        <span>available for interesting projects</span>
+      </footer>
     </section>
   );
 }
