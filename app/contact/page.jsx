@@ -73,7 +73,6 @@ export default function ContactPage() {
             <p>I’m open to conversations about full-stack applications, backend systems, AI-powered projects, and ideas that are worth bringing to life.</p>
             <div className="contact-actions">
               <a className="primary-button" href="mailto:samakchakrmishra03@gmail.com">start a conversation <span>↗</span></a>
-              <a className="text-link" href="/resume">view resume <span>↗</span></a>
             </div>
           </div>
           <div className="contact-details">
